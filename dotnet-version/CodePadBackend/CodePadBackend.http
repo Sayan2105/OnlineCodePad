@@ -1,0 +1,6 @@
+@CodePadBackend_HostAddress = http://localhost:5233
+
+GET {{CodePadBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online CodePad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="w-full bg-white dark:bg-gray-800 shadow px-6 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Online CodePad</h1>
+    <div class="flex gap-3 items-center">
+      <button id="themeBtn" onclick="toggleTheme()" class="px-3 py-1 border rounded text-sm dark:border-gray-600">
+        Toggle Theme
+      </button>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded">Login</button>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <div class="flex flex-col items-center p-8">
+    <textarea id="note" placeholder="Write a note..."
+      class="w-80 h-32 p-3 border rounded mb-4 bg-white dark:bg-gray-800 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+    <div class="flex gap-2 mb-4">
+      <button onclick="saveNote()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Save</button>
+      <button onclick="getNotes()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Load</button>
+    </div>
+
+    <div id="result" class="w-80 bg-white dark:bg-gray-800 p-4 rounded shadow"></div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
