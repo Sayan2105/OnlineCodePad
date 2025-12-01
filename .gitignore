@@ -1,0 +1,34 @@
+# ===== PHP / Laravel (PHP-version) =====
+PHP-version/vendor/
+PHP-version/**/vendor/
+PHP-version/.env
+PHP-version/**/.env
+PHP-version/storage/
+PHP-version/bootstrap/cache/
+
+# ===== Node / Front-end =====
+Front-end/node_modules/
+Front-end/dist/
+Front-end/.cache/
+
+# ===== Python / Flask-version =====
+Flask-version/__pycache__/
+Flask-version/.pytest_cache/
+Flask-version/venv/
+Flask-version/.venv/
+Flask-version/*.pyc
+
+# ===== Dotnet =====
+Dotnet/**/bin/
+Dotnet/**/obj/
+Dotnet/*.user
+Dotnet/*.suo
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+*.log
+
+# ===== Misc =====
+.env
+.env.*
